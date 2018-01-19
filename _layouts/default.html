@@ -1,36 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
-    <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
+  <title>{{ site.title | escape }}: {% if page.title %}{{ page.title | escape }}{% else %}Home{% endif %}</title>
+  <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="/assets/favicon.png"/>
-    <link rel="stylesheet" href="{{ "/assets/base.css" | relative_url }}">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
+  <meta property="og:type" content="article"/>
+  <meta property="og:title" content="{{ site.title | escape }}: {% if page.title %}{{ page.title | escape }}{% else %}Home{% endif %}" />
+  <meta property="og:description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}" />
+  <!-- <meta property="og:image" content="" /> -->
+
+  <link rel="shortcut icon" type="image/png" href="/assets/favicon.png"/>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "/assets/base.css" | relative_url }}">
 </head>
 <body>
-    <header>
-        <a href="/"><h1 class="site-title">{{ site.title }}</h1></a>
-    </header>
-    <main class="page-content">
-        {{ content }}
-    </main>
-    <script>
-        (function() {
-            // TODO: Change this lazy patch for making
-            // external links open in new tabs or just don't.
-            let links = document.links;
-            for (let i = 0, link; link = links[i]; i++) {
-                if (link.hostname != window.location.hostname) {
-                    link.target = "_blank";
-                    link.className += " externalLink";
-                }
-            }
-        })();
-    </script>
+  <header>
+    <a href="/"><h1 class="site-title">{{ site.title }}</h1></a>
+  </header>
+  <main class="page-content">
+    {{ content }}
+  </main>
+  {% if jekyll.environment == "production" %}
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112762435-1"></script>
+  <script>
+    // analytics start.
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-112762435-1');
+    // analytics end.
+  </script>
+  {% endif %}
+  <script>
+    (function() {
+      // TODO: Change this lazy patch for making
+      // external links open in new tabs or just don't.
+      let links = document.links;
+      for (let i = 0, link; link = links[i]; i++) {
+        if (link.hostname != window.location.hostname) {
+          link.target = "_blank";
+          link.className += " externalLink";
+        }
+      }
+    })();
+  </script>
 </body>
 </html>

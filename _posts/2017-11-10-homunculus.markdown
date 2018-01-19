@@ -6,7 +6,7 @@ date:   2017-12-20 03:43:44 +0000
 Thinking about small-world phenomena in information networks, this post looks at the degrees of separation between Wikipedia articles. Using the article "Homunculus" as central node it will ask how closely linked seeming disparate topics can be.
 
 <div class="media-container">
-    <img title="Sensory Homunculi trying to connect on big and small worlds whilst Adam Sandler and others Click." src="../assets/imgs/cover2.jpg">
+    <img title="Sensory Homunculi trying to connect on big and small worlds whilst Adam Sandler and others Click." src="../assets/imgs/homunculus/cover.jpg">
     <small>Sensory Homunculi trying to connect on big and small worlds whilst Adam Sandler and others Click. 2017. </small>
 </div>
 
@@ -15,7 +15,7 @@ Thinking about small-world phenomena in information networks, this post looks at
 You might have heard the expression that there are six degrees of separation between everyone on the planet. This describes the hypothesis that if you were to make a chain between the right mutual friends, it would take 6 connections to reach anyone. Though this figure might not be completely accurate, it expresses what has been called the **small-world phenomenon**.
 
 <div class="media-container slim">
-    <img src="../assets/imgs/one.jpg">
+    <img src="../assets/imgs/homunculus/one.jpg">
     <small>Simple description of degrees of separation just so I know we are on the same page.</small>
 </div>
 
@@ -38,7 +38,7 @@ Trying to find the shortest path between two pages (the least amount of links vi
 From a search sample from 500 [random pages](https://www.mediawiki.org/wiki/API:Random) (`rand500`) it took an average `3.92` clicks to get to the homunculus article. From another sample containing the [50 most visited articles](https://en.wikipedia.org/wiki/Wikipedia:Multiyear_ranking_of_most_viewed_pages#Top-100_list) (`top50`) this number drops to `3.02`. Here is a sketch of some of the shortest paths within `top50` so you can get an idea of what some of the connections are. The starting points are underlined in red and their path lengths are bracketed beside these titles.
 
 <div class="media-container slim">
-    <img title="Bad drawing of paths to the 'Homunculus' Wikipedia article from an arbitary selection of the top most visited wikipedia articles." src="../assets/imgs/results.jpg">
+    <img title="Bad drawing of paths to the 'Homunculus' Wikipedia article from an arbitary selection of the top most visited wikipedia articles." src="../assets/imgs/homunculus/results.jpg">
     <small>Bad drawing of paths to the 'Homunculus' Wikipedia article from an arbitary selection of the top most visited wikipedia articles.</small>
 </div>
 

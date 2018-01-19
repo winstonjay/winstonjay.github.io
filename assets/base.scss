@@ -54,7 +54,7 @@ html, body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     @include media-query($palm) {
-        font-size: 14px;
+        font-size: 15px;
     }
 }
 img, video {
@@ -106,6 +106,10 @@ header {
     top: 0;
     line-height: $spacing-unit*2;
     background-color: $background-color;
+    @include media-query($palm) {
+        padding: 0 $spacing-unit/2;
+        position: absolute;
+    }
 
     h1 {
         font-size: 20px;
@@ -114,9 +118,6 @@ header {
     }
     a {
         color: $base-color;
-    }
-    @include media-query($palm) {
-        padding: 0 $spacing-unit/2;
     }
 }
 
@@ -135,6 +136,12 @@ main {
 h1.page-heading {
     font-weight: 400;
     opacity: 0.87;
+    @include media-query($palm) {
+        line-height: 32px;
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 12px;
+    }
 }
 .post {
     padding-bottom: 0;
@@ -197,7 +204,7 @@ article.post {
             line-height: 32px;
             color:#424242;
             @include media-query($palm) {
-                font-size: 14px;
+                font-size: 15px;
                 line-height: 24px;
             }
         }
