@@ -5,7 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{{ site.title | escape }}: {% if page.title %}{{ page.title | escape }}{% else %}Home{% endif %}</title>
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}Home{% endif %} - {{ site.title | escape }}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
 
   <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
@@ -15,12 +15,20 @@
   <!-- <meta property="og:image" content="" /> -->
 
   <link rel="shortcut icon" type="image/png" href="/assets/favicon.png"/>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata|Roboto:300,400,700" rel="stylesheet">
   <link rel="stylesheet" href="{{ "/assets/base.css" | relative_url }}">
 </head>
 <body>
   <header>
-    <a href="/"><h1 class="site-title">{{ site.title }}</h1></a>
+    <a class="home-link" href="/"><h1 class="site-title">{{ site.title }}</h1></a>
+    <nav>
+      {% for page in site.pages %}
+        {% if page.title %}
+          <a href="{{ page.permalink }}">{{ page.title }}</a>
+        {% endif %}
+      {% endfor %}
+          <a href="https://github.com/{{ site.github_username }}">Github</a>
+    </nav>
   </header>
   <main class="page-content">
     {{ content }}
@@ -37,18 +45,5 @@
     // analytics end.
   </script>
   {% endif %}
-  <script>
-    (function() {
-      // TODO: Change this lazy patch for making
-      // external links open in new tabs or just don't.
-      let links = document.links;
-      for (let i = 0, link; link = links[i]; i++) {
-        if (link.hostname != window.location.hostname) {
-          link.target = "_blank";
-          link.className += " externalLink";
-        }
-      }
-    })();
-  </script>
 </body>
 </html>

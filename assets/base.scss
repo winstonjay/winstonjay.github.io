@@ -82,13 +82,16 @@ pre {
      -ms-border-radius: 5px;
          border-radius: 5px;
     margin: inherit $spacing-unit/2;
+    font-size: 16px;
+    line-height: 21px;
+    max-width: 600px;
     background-color: #EFEFEF;
 }
 
 h1, h2, h3, h4, h5, h6,
 p, blockquote,
 ul, ol, dl,
-figure,
+figure, pre,
 .article-date,
 .post,
 .media-container {
@@ -106,6 +109,9 @@ header {
     top: 0;
     line-height: $spacing-unit*2;
     background-color: $background-color;
+    display: flex;
+    justify-content: space-between;
+
     @include media-query($palm) {
         padding: 0 $spacing-unit/2;
         position: absolute;
@@ -116,14 +122,21 @@ header {
         margin-bottom: 0;
         font-weight: 900;
     }
-    a {
+    a.home-link {
         color: $base-color;
+    }
+}
+
+nav {
+    a {
+        padding: 16px;
+        letter-spacing: 1px;
     }
 }
 
 main {
     max-width: $laptop;
-    margin: $spacing-unit*3 auto $spacing-unit * 4;
+    margin: $spacing-unit*2 auto $spacing-unit * 3;
     padding: $spacing-unit;
     @include media-query($palm) {
         margin: $spacing-unit*2 auto $spacing-unit*2;
@@ -170,7 +183,7 @@ h1.page-heading {
 
 // ##### post page
 
-article.post {
+article.post, article.page {
     h1.post-title {
         margin-bottom: 16px;
         margin-bottom: 16px;
@@ -263,5 +276,13 @@ article.post {
                 padding: $spacing-unit/8;
             }
         }
+    }
+}
+
+article.page {
+    max-width: 600px;
+    margin: auto;
+    h1.post-title {
+        margin-bottom: $spacing-unit;
     }
 }
