@@ -1,6 +1,8 @@
 # winstonjay.github.io
 
-This is a personal blog for writing about DIY data experiments, projects, new media / digital cultures, maybe contemporary art, possibly just things I feel like sharing. I haven’t really made my mind up yet tbh 👍.
+(The Idiot)
+
+This is my personal blog for writing about DIY data experiments, projects, new media / digital cultures, maybe contemporary art, possibly just things I feel like sharing. I haven’t really made my mind up yet tbh 👍.
 
 The working title here is like the Dostoevsky book, but chosen mainly because tech culture is always wanting to be smart and it seemed interesting to claim the opposite.
 
