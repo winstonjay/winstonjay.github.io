@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: The Idiot
-email: your-email@domain.com
+email: 2dff95e@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   DIY data/programing projects/experiments, writing on new media/technologies/digital
   cultures/contemporary art/software/things.
@@ -23,14 +23,25 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: winstonjay
 github_username:  winstonjay
 
+# Formatting Items
 permalink: /posts/:title
-
 datefmt: "%b %-d, %Y"
 
 # Build settings
 markdown: kramdown
-gems:
+theme: minima
+plugins:
   - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
 exclude:
   - Gemfile
   - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - newpost.pl
