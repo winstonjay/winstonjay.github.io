@@ -67,6 +67,9 @@ ul {
 a {
     color: $link-color;
     text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
 }
 code.highlighter-rouge {
     background-color: #FFFFD8;
@@ -93,11 +96,15 @@ ul, ol, dl,
 figure, pre,
 .article-date,
 .post,
-.media-container {
+.media-container, hr {
     margin: 0 auto 32px;
     @include media-query($palm) {
         margin: 0 auto 24px;
     }
+}
+
+hr {
+    opacity: .36;
 }
 
 header {

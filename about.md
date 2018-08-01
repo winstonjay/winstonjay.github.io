@@ -17,12 +17,4 @@ Iâ€™m quite busy writing other things at the moment so this space probably wonâ€
 
 <a href="https://twitter.com/2dff95e?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @2dff95e</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-Its `2dff95e` because I couldn't find any sensical email local-part with gmail but I still wanted it to be derived from a simple phrase sooo...
-
-```Python
->>> m = hashlib.sha256('Contact Karl')
->>> m.hexdigest()[:7]
-'2dff95e'
-```
-
 <img src="{{ 'assets/imgs/signature-1.gif' | absolute_url }}">
